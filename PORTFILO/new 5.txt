@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Theme</title>
+    <style>
+        /* CSS styling goes here */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        header a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        
+        main {
+            padding: 20px;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        aside {
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo">
+        <nav>
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#resources">Resources</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h1>About</h1>
+            <p>Description of your theme goes here.</p>
+        </section>
+
+        <section id="work">
+            <h2>Work Showcase</h2>
+            <!-- Add your work or achievements related to the theme here -->
+        </section>
+
+        <section id="resources">
+            <h2>Related Resources</h2>
+            <!-- Add related links or resources here -->
+        </section>
+    </main>
+
+    <aside>
+        <h3>Related Links</h3>
+        <!-- Add related links or resources here -->
+    </aside>
+
+    <footer>
+        <nav>
+            <a href="#"><img src="social-media-icon1.png" alt="Social Media Icon 1"></a>
+            <a href="#"><img src="social-media-icon2.png" alt="Social Media Icon 2"></a>
+            <a href="#"><img src="social-media-icon3.png" alt="Social Media Icon 3"></a>
+        </nav>
+        <p>Contact information goes here</p>
+    </footer>
+</body>
+</html>

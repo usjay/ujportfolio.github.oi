@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wild life</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+			color : black;
+        }
+        
+        header {
+            background-color: white;
+            color: #fff;
+            padding: 40px;
+            text-align: center ;font-family: Arial, sans-serif;
+			
+        }
+         h1 {
+            background-color: #27da2c;
+            color: #fff;
+            padding: 40px;
+            text-align: center ;
+		}
+			
+			e. {
+            background-color: blue;
+            color: #fff;
+            padding: 40px;
+            text-align: center ;font-family: Arial, sans-serif ;
+        }
+        header a {
+            color: #e51010;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        
+        main {
+            padding: 20px;
+        }
+        
+        section {
+            margin-bottom: 60px;
+			text-align: center;
+        }
+        
+        aside {
+            width: 400px;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+		
+   .nav{
+   color :#e51010;
+   margin-bottom: 60px;
+   }
+   .mar img {
+    width: 400px;
+    height: 400px; 
+	
+   }
+   .p{
+      
+       text-align: left;
+		
+    }
+    .form{
+	    max-width: 320px;
+     }
+	 
+		.hidden {
+      display: none;
+    }
+	 .portfolio-item {
+      width: 200px;
+      height: 200px;
+      background-color: lightgray;
+      margin: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      display: inline-block;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .portfolio-item:hover {
+      background-color: lightblue;
+    }
+
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 5px;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+	.slider {
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.slider-controls {
+  margin-top: 10px;
+}
+
+.prev-btn, .next-btn {
+  padding: 5px 10px;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.prev-btn {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.next-btn:hover, .prev-btn:hover {
+  background-color: #999;
+  font-size: 16px;
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.bt{
+ 
+  background-color: red; /* Green */
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  
+  font-size: 16px;
+}
+.ani{
+
+ background-color: yellow;
+
+}
+    </style>
+</head>
+<body>
+    <header>
+	<section  id ="e">
+	
+<h1> WILD LIFE  VITALITY<br>
+Exploring the Untamed Beauty of the Natural World <br>
+<img src = "wild life.jpg"  style = width:200px ; height:100px; align: center ; >
+</section>
+<nav>
+
+            <a href="#about">About</a>
+            <a href="#work">show cases</a>
+            <a href="#resources">Resources</a>
+            <a href="#contact">Contact</a>
+        </nav>
+		
+		
+		<script>
+    // Smooth scrolling functionality
+    var navLinks = document.querySelectorAll('#navbar a');
+
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        var targetSection = document.querySelector(link.getAttribute('href'));
+
+        targetSection.scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+		
+		
+	<marquee class="mar">
+	<div class ="my" >
+	
+        <img src="lion.png" >
+		 <img src="zee.jpg" >
+		  <img src="ele.jpg">
+		   <img src="deer.jpg" >
+		 <img src="ber.jpg"  ;>
+		
+		
+		</div>
+		</marquee>
+        
+   <div class="slider">
+  <img src="lion-565820_1280.jpg" alt="lion">
+  <img src="zee.jpg" alt="zeebra">
+</div>
+<div class="slider-controls">
+  <button class="prev-btn">Previous</button>
+  <button class="next-btn">Next</button>
+</div>
+
+<script>
+const slider = document.querySelector('.slider');
+const images = slider.querySelectorAll('img');
+const prevButton = document.querySelector('.prev-btn');
+const nextButton = document.querySelector('.next-btn');
+let currentIndex = 0;
+
+
+function showImage() {
+  
+  images.forEach(image => {
+    image.style.transform = 'translateX(-100%)';
+  });
+
+ 
+  images[currentIndex].style.transform = 'translateX(0)';
+}
+
+
+ function showNextImage() {
+  currentIndex++;
+  if (currentIndex >= images.length) {
+    currentIndex = 0;
+  }
+  showImage();
+}
+
+function showPrevImage() {
+  currentIndex--;
+  if (currentIndex < 0) {
+    currentIndex = images.length - 1;
+  }
+  showImage();
+}
+
+// Event listeners for next and previous buttons
+nextButton.addEventListener('click', showNextImage);
+prevButton.addEventListener('click', showPrevImage);
+
+// Show the first image initially
+showImage();
+
+// Automatic image sliding
+setInterval(showNextImage,5000 ); // Change image every 3 seconds
+
+</script>
+    </header>
+	
+    <main>
+        <section id="about">
+            <h1>About</h1>
+    <div class =" p">       
+			<p>For 60 years, the focus of our organization has been to help wildlife and their habitats thrive.
+
+As the world's leading wildlife conservation organization, we operate in nearly 100 countries. We collaborate with individuals and communities worldwide to develop and implement innovative solutions that safeguard wildlife, their ecosystems, and the well-being of local communities.
+
+HOW WE WORK
+For Wildlife, For Nature, Forever
+Our primary objective is to conserve and protect wildlife species and their natural habitats. We work closely with local communities to ensure the sustainable management of natural resources on which they rely. We also strive to transform markets and policies to promote sustainability and advocate for the protection and restoration of species and their habitats. From local initiatives to global efforts, we integrate the value of wildlife and nature into decision-making processes.
+
+At the heart of our work lies the combination of cutting-edge wildlife conservation science and the collective power of our partners. With the support of over 1.3 million supporters in the United States and 5 million globally, as well as partnerships with communities, companies, and governments, we strive to make a lasting impact.
+
+Today, human activities exert more pressure on wildlife than ever before. However, we firmly believe that humans also possess the power to reverse this trend. By working together, we can address the greatest threats to wildlife on our planet and protect the natural resources that sustain and inspire us.
+
+Our work revolves around six ambitious goals:
+<ol>
+<div class = "p">
+1. Ensuring the survival of endangered species: We strive to prevent the extinction of threatened species and ensure their populations recover.<br>
+
+2. Safeguarding critical habitats: We work to protect and restore key habitats that are vital for the survival of diverse wildlife species.<br>
+
+3. Combating wildlife trafficking: We actively fight against illegal wildlife trade, working to eliminate this devastating practice.<br>
+
+4. Promoting sustainable practices: We advocate for sustainable land and resource management to minimize negative impacts on wildlife and their habitats.<br>
+
+5. Mitigating climate change: We address the effects of climate change on wildlife and work towards sustainable solutions that reduce greenhouse gas emissions.<br>
+
+6. Fostering the coexistence of wildlife and people: We strive to promote harmony between human activities and wildlife conservation, ensuring that communities and wildlife can thrive together.</div></ol>
+
+By dedicating our efforts to wildlife conservation, we aim to protect the delicate balance of our ecosystems and ensure a future where wildlife thrives alongside human society.
+
+</p>
+</div>
+        </section>
+
+        <section id="work">
+            <h1> Showcase</h1>
+           <p>Title: "Into the Wild: Exploring Nature's Wonders"
+
+Introduction:
+"Join us on an exhilarating journey as we venture deep into the heart of untouched wilderness to witness some of the most captivating creatures in their natural habitats. In 'Into the Wild: Exploring Nature's Wonders,' we bring you up-close encounters with magnificent wildlife, breathtaking landscapes, and incredible stories of survival. Get ready to be amazed by the wonders of the animal kingdom!"
+<br><br><br>
+<div class = "p">
+Segment 1:<br> Majestic Predators of the Savanna
+
+Location: Maasai Mara National Reserve, Kenya
+Highlights:
+Lions: Observe a pride of lions as they strategize and hunt their prey, showcasing their strength and coordination.
+Cheetahs: Witness the world's fastest land animal in action, capturing their incredible bursts of speed during a high-speed chase.
+African Wild Dogs: Learn about the highly social nature of these endangered predators and witness their teamwork during a hunt.<br><br><br><br>
+
+Segment 2: <br> Secrets of the Rainforest
+
+Location: Amazon Rainforest, Brazil
+Highlights:
+Jaguars: Track the elusive jaguar, showcasing its stealthy movements and highlighting its vital role in maintaining the rainforest's ecosystem.
+Poison Dart Frogs: Discover the vibrant and poisonous world of these tiny amphibians, learning about their striking colors and fascinating behaviors.
+Harpy Eagles: Experience the awe-inspiring flight of these majestic raptors as they swoop through the canopy in search of prey.<<br><br><br>
+Segment 3: <br> Underwater Wonders
+
+Location: Great Barrier Reef, Australia
+Highlights:
+Sea Turtles: Dive into the crystal-clear waters to witness the grace of these ancient mariners as they navigate their way through the reef.
+Manta Rays: Glide alongside these gentle giants as they gracefully soar through the water, showcasing their impressive wingspans.
+Colorful Coral Reefs: Explore the vibrant and diverse underwater ecosystems, showcasing the delicate beauty of coral formations and their inhabitants.<br><br><br>
+Segment 4:<br>  Arctic Kingdom
+
+Location: Svalbard, Norway
+Highlights:
+Polar Bears: Observe the world's largest land predator in its icy habitat, capturing their hunting techniques and emphasizing the challenges they face due to climate change.
+Arctic Foxes: Follow these resilient creatures as they adapt to the harsh Arctic conditions and change their fur color with the seasons.
+Walrus Colonies: Witness the impressive gatherings of walruses as they come together on the Arctic shores, showcasing their social interactions.</p></div>
+
+
+ <img src="lion1.jpg ">
+ <div class = "p">
+ <p>
+ Habitat and Distribution:
+Lions are primarily found in sub-Saharan Africa, with a small population in the Gir Forest of India. They inhabit various types of habitats, including savannas, grasslands, and open woodlands. Lions are highly adaptable and can survive in a range of environments.
+
+Physical Characteristics:
+Male lions are easily recognized by their majestic manes, which vary in color and length depending on the individual. They have muscular bodies, a large head with a prominent muzzle, and strong jaws. Adult male lions can weigh between 330 to 550 pounds (150 to 250 kilograms), while adult females are smaller, weighing around 265 to 400 pounds (120 to 180 kilograms).
+
+Social Structure and Behavior:
+Lions are the only truly social cats, living in groups known as prides. A pride typically consists of related females, their young, and a coalition of 2-3 male lions. The females are responsible for hunting and raising the cubs, while the males defend the territory and protect the pride. Lions are known for their distinct roaring, which helps them communicate and establish their presence over long distances.
+
+Hunting and Diet:
+Lions are apex predators and primarily feed on large herbivores such as zebras, wildebeests, and buffalo. They are powerful hunters, using their strength, teamwork, and stealth to bring down their prey. Lionesses often work together to surround and ambush their targets, while the males may assist in taking down larger prey.
+
+Conservation Status:
+Lions are currently listed as "Vulnerable" by the International Union for Conservation of Nature (IUCN). The main threats to lion populations are habitat loss, human-wildlife conflict, and poaching. Conservation efforts focus on protecting their habitats, mitigating conflicts with local communities, and raising awareness about the importance of conserving these iconic animals.</p>
+      </div>
+<img src="owl.jpg ">
+<div class = "p">
+ <p>
+ Habitat and Distribution:
+Owls are found on every continent except Antarctica, occupying a diverse range of habitats such as forests, grasslands, deserts, and tundras. They are adaptable birds and can thrive in various environments, including urban areas.
+
+Physical Characteristics:
+Owls have several distinct features that set them apart from other birds:
+
+Large Eyes: Owls have large, forward-facing eyes that are adapted for excellent night vision. Their eyes are fixed in their sockets, so they rotate their heads up to 270 degrees to compensate for their limited neck mobility.
+Silent Flight: Owls possess specialized feathers that allow them to fly silently. This adaptation helps them sneak up on prey without making noise.
+Facial Disc: Many owl species have a facial disc, a circular arrangement of feathers around their eyes. The disc helps funnel sound towards their ears, enhancing their hearing abilities.
+Talons: Owls have strong, sharp talons for capturing and gripping prey. Their talons are capable of exerting significant force.
+Behavior and Adaptations:
+Owls are primarily nocturnal, meaning they are most active during the night. They have extraordinary hearing, thanks to asymmetrical ear placement on their heads, which enables them to accurately locate prey by sound. Owls are renowned for their exceptional hunting skills, using their silent flight, keen vision, and sharp talons to catch a variety of prey, including small mammals, birds, insects, and even fish.
+
+Species Diversity:
+There are around 200 owl species globally, belonging to different genera and families. Some well-known owl species include the Barn Owl, Great Horned Owl, Snowy Owl, and the Eagle Owl. Each species has its own unique characteristics, including size, appearance, and habitat preferences.
+
+Conservation Status:
+Owls face various conservation challenges, including habitat loss, deforestation, and secondary poisoning from pesticides. Some owl species are also affected by illegal wildlife trade. Conservation efforts focus on protecting their habitats, promoting awareness, and monitoring owl populations to ensure their long-term survival.
+.</p> </div>
+<img src="bird.jpg ">
+<div class = "p">
+ <p>Habitat and Distribution:
+Wild birds inhabit a variety of ecosystems, including forests, grasslands, wetlands, deserts, mountains, and coastal areas. Their distribution is influenced by factors such as climate, food availability, nesting sites, and migration patterns. Different species of birds can be found on every continent and in virtually every type of habitat on Earth.
+
+Diversity and Adaptations:
+There are over 10,000 known species of birds, each with its own unique characteristics and adaptations. Birds come in various sizes, colors, and shapes, reflecting their evolutionary adaptations for specific ecological niches. They exhibit a remarkable array of beak shapes, wing structures, and plumage patterns, enabling them to exploit diverse food sources, navigate through different environments, and attract mates.
+
+Feeding Behavior:
+Birds have diverse feeding habits and consume a wide range of food sources. Some birds are herbivorous, feeding on fruits, seeds, nectar, or plant matter. Others are carnivorous or insectivorous, preying on insects, small mammals, fish, or other birds. There are also omnivorous birds that have a varied diet, consuming both plant and animal matter.
+
+Migration:
+Many bird species undertake seasonal migrations, flying long distances between their breeding and wintering grounds. Migration allows birds to take advantage of favorable conditions for breeding, feeding, and survival throughout the year. It is a remarkable phenomenon involving precise navigation and energy conservation strategies.
+
+Vocalizations and Communication:
+Birds are known for their intricate vocalizations and elaborate songs, which serve various purposes such as attracting mates, establishing territory, warning of danger, and communicating within flocks. Each species has its own unique vocal repertoire, with some birds being particularly renowned for their melodious songs.
+
+Conservation:
+Wild birds face numerous threats, including habitat loss, climate change, pollution, predation by invasive species, and collisions with human-made structures like buildings and power lines. Many bird species are also impacted by illegal trade and hunting. Conservation efforts aim to protect important habitats, promote sustainable practices, and raise awareness about the value of bird conservation</p>
+ </div> <img src="peacock.jpg ">
+<div class = "p">
+ <p>Species and Distribution:
+The term "peacock" typically refers to the male bird, scientifically known as the Indian Peafowl (Pavo cristatus). Peafowls are native to the Indian subcontinent and Sri Lanka but have been introduced to various parts of the world due to their captivating appearance. Peafowls are often kept in captivity for their beauty and have become a symbol of exoticism.
+
+Physical Characteristics:
+Male peacocks are known for their extravagant plumage. They have a long, iridescent tail made up of elongated upper-tail covert feathers called "train feathers." These feathers are adorned with vibrant blue and green colors, with an "eye" pattern at the end. The rest of their body is covered in iridescent blue-green feathers. In contrast, female peafowls, known as peahens, have a more subdued brown plumage for camouflage purposes.
+
+Courtship Displays:
+One of the most iconic behaviors of peacocks is their courtship displays. During mating season, male peacocks spread their tail feathers into a magnificent fan and perform an intricate dance to attract females. They rhythmically strut, vibrate their tail feathers, and make a distinct rattling sound. The display showcases their physical fitness and genetic quality to potential mates.
+
+Habitat and Behavior:
+Peafowls inhabit a variety of habitats, including forests, grasslands, and cultivated areas. They are omnivorous birds, feeding on a diet consisting of seeds, grains, fruits, insects, and small reptiles or mammals. Peafowls are typically ground-dwelling birds but are capable of flying short distances when needed.
+
+Symbolism and Cultural Significance:
+Peacocks have held symbolic value in various cultures throughout history. They are often associated with beauty, elegance, and immortality. In Hinduism, the peacock is considered a sacred bird and is associated with deities like Lord Krishna. Peacock motifs are commonly found in art, textiles, and architecture in different parts of the world.
+
+Conservation Status:
+Indian Peafowls are not currently classified as globally threatened and have stable populations. However, habitat loss, hunting, and illegal trade pose localized threats to some populations. Conservation efforts focus on habitat preservation, combating poaching, and raising awareness about the importance of protecting these beautiful birds.</p>
+	</div>
+<img src="bear.jpg ">
+<div class = "p">
+ <p>	Species and Distribution:
+There are eight species of bears in the world, each with its own unique characteristics and distribution. These include the American black bear, brown bear, polar bear, Asiatic black bear, sun bear, sloth bear, spectacled bear, and giant panda. Bears are found on every continent except Australia and Antarctica.
+
+Physical Characteristics:
+Bears are large and muscular animals, with stocky bodies, shaggy fur, and powerful jaws. They have strong paws with sharp claws that allow them to climb trees, dig for food, and defend themselves. Their color and markings vary widely depending on the species and geographic location.
+
+Habitat and Behavior:
+Bears inhabit a variety of ecosystems, including forests, mountains, tundra, and polar regions. They are generally solitary animals and are active during the day or night, depending on the species. Some bears, such as brown bears, are known to hibernate during the winter months.
+
+Diet:
+Bears are omnivorous and have a varied diet consisting of plants, insects, fish, and small mammals. Some species, such as polar bears, are specialized carnivores and rely heavily on seals for food.
+</p> </div>
+<img src="elep.jpg ">
+<div class = "p">
+ <p>
+ Wild elephants are magnificent and highly intelligent mammals that are known for their size, social behavior, and cultural significance. Here is some information about wild elephants:
+
+Species and Distribution:
+There are three main species of wild elephants:
+African Elephants: Found in sub-Saharan Africa, with two subspecies: the African Forest Elephant and the African Savannah Elephant.
+Asian Elephants: Native to Southeast Asia, with several subspecies in different countries.
+Physical Characteristics:
+Elephants are the largest land mammals on Earth. They have a robust body, long trunk, large ears, and long, curved tusks (only in some male elephants). African elephants are larger than Asian elephants, with males reaching heights of up to 13 feet (4 meters) at the shoulder and weighing up to 12,000 pounds (5,400 kilograms).
+
+Habitat and Behavior:
+Wild elephants inhabit various habitats, including forests, grasslands, and wetlands. They are highly social animals and live in complex family groups led by a matriarch. These groups, known as herds, consist of related females and their offspring. Male elephants typically leave the herd when they reach sexual maturity and either live solitary lives or form small bachelor groups. Elephants have a strong sense of communication and use a variety of vocalizations, body movements, and touch to interact with each other.
+
+Diet and Feeding Habits:
+Elephants are herbivorous animals with a plant-based diet. They consume a wide range of vegetation, including grasses, leaves, bark, fruits, and roots. Adult elephants can eat up to 300 pounds (135 kilograms) of food per day to meet their nutritional needs.
+
+Conservation Status:
+Both African and Asian elephants face numerous conservation challenges. Habitat loss, fragmentation, poaching for ivory, and human-elephant conflicts are the primary threats to their survival. Elephants are listed as vulnerable or endangered, and several conservation organizations work to protect their habitats, promote anti-poaching efforts, and mitigate human-elephant conflicts.
+
+Cultural Significance:
+Elephants hold cultural and religious significance in many societies. They are admired for their intelligence, memory, and emotional depth. Elephants have been depicted in folklore, mythology, and art across various cultures, symbolizing strength, wisdom, and spirituality.
+ </p> </div>
+<img src="monkey.jpg ">
+<div class = "p">
+ <p> Species and Distribution:
+There are numerous monkey species distributed across different regions. Some of the well-known monkey species include:
+Capuchin Monkeys: Native to Central and South America.
+Howler Monkeys: Found in Central and South America.
+Macaques: Distributed throughout Asia.
+Baboons: Native to Africa and parts of Arabia.
+Spider Monkeys: Found in Central and South America.
+Marmosets and Tamarins: Native to South America.
+Physical Characteristics:
+Monkeys come in various sizes, ranging from small, slender species to larger, robust ones. They have a well-developed skeletal structure, opposable thumbs (in most species), and prehensile tails (in some species) that aid in climbing and grasping. Monkeys have a wide range of fur colors and patterns, which vary between species.
+
+Habitat and Behavior:
+Monkeys inhabit diverse habitats, including forests, savannas, mountains, and even urban areas. They exhibit a range of behaviors depending on the species, but in general, monkeys are social animals that live in groups called troops or bands. Group dynamics can vary, from small family units to large communities with multiple males and females. Monkeys use vocalizations, body language, and facial expressions to communicate within their group.
+
+Diet and Feeding Habits:
+Monkeys have an omnivorous diet, although specific food preferences vary between species. Their diet includes fruits, seeds, leaves, flowers, insects, small vertebrates, and sometimes even eggs. Monkeys have specialized teeth and digestive systems adapted to their specific dietary needs.
+
+Cognitive Abilities and Tool Use:
+Monkeys are highly intelligent animals with problem-solving skills and cognitive abilities. Some species, such as capuchin monkeys, have been observed using tools to access food or solve puzzles. They exhibit complex social behaviors, engage in social learning, and have been studied extensively to understand their cognitive capacities.
+
+Conservation Status:
+Many monkey species face conservation challenges due to habitat loss, deforestation, illegal wildlife trade, and human-wildlife conflicts. Some monkey populations are listed as vulnerable or endangered. Conservation efforts focus on protecting their habitats, implementing anti-poaching measures, and raising awareness about the importance of conserving these charismatic primates.</p>
+</section>
+
+<h1 style =text-align : center><b>Additional Information </b></h1>
+
+  <button id="toggleButton">Show More</button>
+  
+  <div id="additionalInfo" class="hidden">
+    
+   <p> Wildlife refers to the diverse range of living organisms found in their natural habitats, including animals, plants, and microorganisms. It encompasses a wide array of species, each adapted to their specific environment and playing a crucial role in maintaining the balance of ecosystems.
+
+Wildlife exists in various ecosystems around the world, such as forests, grasslands, deserts, oceans, and freshwater bodies. It includes iconic and well-known animals like lions, elephants, tigers, bears, whales, dolphins, birds, and reptiles, as well as countless lesser-known species that contribute to the rich biodiversity of our planet.
+
+The study and conservation of wildlife are essential for several reasons. Wildlife has intrinsic value, meaning it has worth and deserves protection simply because it exists. Additionally, wildlife plays significant roles in ecological processes like pollination, seed dispersal, nutrient cycling, and maintaining predator-prey relationships.
+
+However, wildlife faces numerous challenges and threats today. Habitat loss due to deforestation, urbanization, and climate change is a major concern. Poaching, illegal wildlife trade, pollution, invasive species, and conflicts with human activities further endanger many species.
+
+Conservation efforts aim to protect and restore wildlife populations and their habitats. These efforts involve establishing protected areas, implementing sustainable land-use practices, promoting public awareness and education, supporting wildlife research and monitoring, and combating illegal activities that harm wildlife.
+
+Conserving wildlife not only preserves biodiversity but also contributes to the overall health of ecosystems and benefits human well-being. It supports ecotourism, provides opportunities for scientific discoveries, and ensures the sustainability of essential ecosystem services upon which humans depend.
+
+Safeguarding wildlife requires collective efforts from governments, organizations, communities, and individuals to promote responsible and sustainable interactions with nature, reduce habitat destruction, combat wildlife trafficking, and address the underlying causes of biodiversity loss.   </p>
+  </div>
+  <script>
+    var toggleButton = document.getElementById("toggleButton");
+    var additionalInfo = document.getElementById("additionalInfo");
+
+    toggleButton.addEventListener("click", function() {
+      if (additionalInfo.classList.contains("hidden")) {
+        additionalInfo.classList.remove("hidden");
+        toggleButton.textContent = "Hide";
+      } else {
+        additionalInfo.classList.add("hidden");
+        toggleButton.textContent = "Show More";
+      }
+    });
+	
+  </script>
+        <section id="resources">
+            <h1>Related Resources</h1>
+            <!-- Add related links or resources here -->
+        </section>
+    </main>
+
+    <aside>
+        <h3>Related Links</h3>
+		<a href=" https://www.worldwildlife.org">  World Wildlife Fund (WWF): WWF is a leading organization dedicated to conservation and protection of the world's wildlife and habitats. Their website provides extensive information about various species, conservation efforts, and global environmental issues.
+ </a>
+   <br>
+   <br><br><br><br><br><br>
+   <a href="https://www.nationalgeographic.com/animals ">National Geographic: National Geographic has a long-standing reputation for its commitment to exploration, science, and conservation. Their website offers a wealth of wildlife-related content, including articles, photos, videos, and educational resources.
+</a>
+   <br><br><br><br><br><br><br>
+  
+  <a href=" https://nationalzoo.si.edu">Smithsonian's National Zoo and Conservation Biology Institute: This renowned institution provides valuable information about wildlife species, conservation research, and educational programs. Their website features animal factsheets, live animal webcams, and conservation success stories.
+</a>
+   <br><br><br><br><br><br><br>
+ <a href=" https://www.nhm.ac.uk">Natural History Museum: The Natural History Museum in London, UK, is home to an extensive collection of specimens and serves as a hub for scientific research and education. Their website provides information on various wildlife species, biodiversity, and research projects.
+</a>
+   <br><br><br><br><br><br><br>
+
+    </aside>
+	
+	<h1><b>Are you wild life lover??</b></h1>
+<div class="bt">
+<button onclick="typeWriter() ">if  click me</button>
+</div>
+<p id="demo"></p>
+
+<script>
+var i = 0;
+var txt = 'Are you passionate about wildlife and conservation? We invite you to join our vibrant community of wildlife lovers who are dedicated to making a positive impact on the natural world.';
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script></div>
+<section id="contact">
+            <h1>Contact information<br>
+			<p> <b>if you willing to share your collection please contact us</b> </p></h1>
+			
+			
+	<div class="tooltip">
+     <span class="tooltiptext"> for calls</span>
+	      +94 112-58278 
+		  <br>+9425547856 
+		  </div>
+		  <br>
+		  <div class="tooltip">
+     <span class="tooltiptext"> for message</span>
+		<a href = " wildlifeinfor@mail.com" > wildlifeinfor@mail.com</a> <br>
+        </section>
+		</div>
+    <footer>
+        
+        <P> FOLLOW US </P>
+		
+		<!-- Tooltip -->
+   <div class="tooltip">
+     <span class="tooltiptext">twitter </span>
+	 	<a href ="https://twitter.com/login">
+      <img src="R.jpg" style="width: 100px; height: 100px;" alt="Image">		
+		</a>
+  </div>
+		
+		 <div class="tooltip">
+     <span class="tooltiptext">instrgram</span>
+	 <a href ="https://www.instagram.com/accounts/login/">
+        <img src="in.jpg" style="width: 100px; height: 100px;" alt="Image">		
+		</a>
+	 	
+  </div>
+   <div class="tooltip">
+     <span class="tooltiptext">facebook</span>
+	 <a href ="https://www.facebook.com/login.php
+">
+        <img src="OIP.jpg" style="width: 100px; height: 100px;" alt="Image">		
+		</a>	
+  </div>
+		
+		
+		
+
+    </footer>
+	<script>  
+  function validateform(){  
+var username=document.myform.username.value;  
+var password=document.myform.password.value;  
+  
+if (username==null ||  username==""){  
+  alert("Name can't be blank");  
+  return false;  
+}else if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  }  
+}  
+</script>  
+<br>
+  <div id="form">
+
+     <div class="tooltip">
+     <span class="tooltiptext">to login</span>
+	 
+  	<form   name="myform" method="post" action="abc.jsp" onsubmit="return validateform()" >  
+	User Name: <input type="text" name="username"><br/>  
+	Password: <input type="password" name="password"><br/>  
+	<input type="submit" value="login">  
+	</form>  
+	</div>
+
+</div>
+
+ <script>
+ var i =0;
+ var images =[];
+ var time =1000;
+
+// image list 
+  image [0] = 'lion.png';
+  image [1] = 'zee.jpg';
+  image [2] = "ele.jpg";
+  image [3] = "deer.jpg";
+  // change image
+   function  changeImg() {
+   document.slide.src = images[i];
+     
+	 if(i < images.length -1){
+	 i++;
+	 }
+	 else{
+	 i= 0;
+	  
+	 }
+      setTimeout("changeImg()",time);
+   
+   
+   }
+   window.onload =changeImg;
+   <img name="slide" width ="400"   height ="200">
+ 
+ 
+ 
+<img name="slide" width ="400"   height ="200">
+</script>
+  
+   
+  
+  <br>
+  <br>
+  
+  <div class="bt">
+  <button id="clickButton">help</button>
+</div>
+  <script>
+    // Click event functionality
+    var clickButton = document.getElementById("clickButton");
+
+    clickButton.addEventListener("click", function() {
+      alert("please contact our custumer service through hot line");
+    });
+  </script>
+   
+  
+</body>
+</html>
+
+
+
+
+
+
