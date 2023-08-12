@@ -1,2 +1,0 @@
-# ujportfolio.github.oi
-My portfolio is designed around wildlife.  The website contains information about wild animals. It contains an idea about the nature of wild animals and their behavior.  Anyone who uses the website can first register by filling the form below and users' comments and suggestions can be announced to us through the social media. Also, users can give us the information they have and publish them on our website.
